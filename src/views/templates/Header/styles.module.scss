@@ -1,0 +1,69 @@
+.header {
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  & > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.menus {
+  & > a {
+    color: #fff;
+    margin-right: 30px;
+  }
+}
+
+.lang {
+  position: relative;
+}
+.languageCheckbox {
+  display: none;
+}
+.languages {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  & > label {
+    width: 60px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .languageActive {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+.activeLanguage {
+  width: 60px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.languageCheckbox:checked ~ .languages {
+  height: 100px;
+  opacity: 1;
+}
